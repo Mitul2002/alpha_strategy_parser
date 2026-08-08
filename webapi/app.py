@@ -26,8 +26,6 @@ def safe_float(value):
     return float(value)
 
 from strategy_executor import StrategyExecutor
-from ehlers_indicators import *
-from ehlers_transformations import *
 
 # Configure logging
 logging.basicConfig(level=logging.INFO)
@@ -205,17 +203,6 @@ def extract_basic_indicator_specs(strategy: str) -> List[str]:
     
     import re
     for pattern in ta_lib_patterns:
-        matches = re.findall(pattern, strategy, re.IGNORECASE)
-        basic_indicators.extend(matches)
-    
-    # Ehlers indicators
-    ehlers_patterns = [
-        r'fisher_transform\([^)]+\)', r'instantaneous_trendline\([^)]+\)', r'cg_oscillator\([^)]+\)',
-        r'relative_vigor_index\([^)]+\)', r'cyber_cycle_oscillator\([^)]+\)', r'decycler\([^)]+\)',
-        r'band_pass_filter\([^)]+\)', r'super_smoother\([^)]+\)', r'roofing_filter\([^)]+\)'
-    ]
-    
-    for pattern in ehlers_patterns:
         matches = re.findall(pattern, strategy, re.IGNORECASE)
         basic_indicators.extend(matches)
     
@@ -501,114 +488,6 @@ async def indicator_series(symbol: str, indicators: str):
         
     except Exception as e:
         logger.error(f"Error calculating indicators for {symbol}: {e}")
-        raise HTTPException(status_code=500, detail=str(e))
-
-# ---- Ehlers indicators endpoints ----
-@app.get("/ehlers/indicators")
-async def get_ehlers_indicators():
-    """Get list of available Ehlers indicators"""
-    return {
-        "indicators": [
-            "fisher_transform", "instantaneous_trendline", "cg_oscillator",
-            "relative_vigor_index", "cyber_cycle_oscillator", "decycler",
-            "band_pass_filter", "super_smoother", "roofing_filter"
-        ],
-        "transformations": [
-            "stochasticization", "fisherization", "combined_transformation"
-        ]
-    }
-
-@app.post("/ehlers/calculate")
-async def calculate_ehlers_indicator(request: dict):
-    """Calculate a specific Ehlers indicator"""
-    try:
-        indicator = request.get('indicator')
-        symbol = request.get('symbol')
-        params = request.get('params', {})
-        
-        if not indicator or not symbol:
-            raise HTTPException(status_code=400, detail="indicator and symbol are required")
-        
-        # Load data
-        data_root_env = os.getenv("DATA_PARTITIONED_PATH")
-        default_path = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..', 'context', 'rsi_forward_returns', 'data_partitioned'))
-        data_path = Path(data_root_env) if data_root_env else Path(default_path)
-        
-        target = symbol.strip().upper()
-        parquet_path = None
-        for p in data_path.glob("*.parquet"):
-            stem = p.stem.replace("('", "").replace("',)", "").upper()
-            if stem == target:
-                parquet_path = p
-                break
-        
-        if parquet_path is None:
-            raise HTTPException(status_code=404, detail=f"Symbol {symbol} not found")
-        
-        df = pd.read_parquet(parquet_path)
-        
-        # Calculate indicator based on type
-        if indicator == "fisher_transform":
-            result = fisher_transform(df['close'].values, params.get('period', 10))
-        elif indicator == "instantaneous_trendline":
-            result = instantaneous_trendline(df['close'].values, params.get('alpha', 0.07))
-        elif indicator == "cg_oscillator":
-            result = cg_oscillator(df['close'].values, params.get('period', 10))
-        elif indicator == "relative_vigor_index":
-            result = relative_vigor_index(df['close'].values, params.get('period', 10))
-        elif indicator == "cyber_cycle_oscillator":
-            result = cyber_cycle_oscillator(df['close'].values, params.get('period', 10))
-        elif indicator == "decycler":
-            result = decycler(df['close'].values, params.get('period', 40))
-        elif indicator == "band_pass_filter":
-            result = band_pass_filter(df['close'].values, params.get('low_period', 10), params.get('high_period', 20))
-        elif indicator == "super_smoother":
-            result = super_smoother(df['close'].values, params.get('period', 10))
-        elif indicator == "roofing_filter":
-            result = roofing_filter(df['close'].values, params.get('period', 40))
-        else:
-            raise HTTPException(status_code=400, detail=f"Unknown indicator: {indicator}")
-        
-        return {
-            "symbol": target,
-            "indicator": indicator,
-            "params": params,
-            "values": convert_numpy_types(result.tolist() if hasattr(result, 'tolist') else result)
-        }
-        
-    except Exception as e:
-        logger.error(f"Error calculating Ehlers indicator: {e}")
-        raise HTTPException(status_code=500, detail=str(e))
-
-@app.post("/ehlers/transform")
-async def apply_ehlers_transformation(request: dict):
-    """Apply Ehlers transformation to data"""
-    try:
-        transformation = request.get('transformation')
-        data = request.get('data', [])
-        params = request.get('params', {})
-        
-        if not transformation or not data:
-            raise HTTPException(status_code=400, detail="transformation and data are required")
-        
-        # Apply transformation
-        if transformation == "stochasticization":
-            result = stochasticization(np.array(data), params.get('period', 14))
-        elif transformation == "fisherization":
-            result = fisherization(np.array(data), params.get('period', 10))
-        elif transformation == "combined_transformation":
-            result = combined_transformation(np.array(data), params.get('stoch_period', 14), params.get('fisher_period', 10))
-        else:
-            raise HTTPException(status_code=400, detail=f"Unknown transformation: {transformation}")
-        
-        return {
-            "transformation": transformation,
-            "params": params,
-            "result": convert_numpy_types(result.tolist() if hasattr(result, 'tolist') else result)
-        }
-        
-    except Exception as e:
-        logger.error(f"Error applying Ehlers transformation: {e}")
         raise HTTPException(status_code=500, detail=str(e))
 
 if __name__ == "__main__":

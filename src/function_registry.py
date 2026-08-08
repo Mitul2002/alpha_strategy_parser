@@ -1,19 +1,14 @@
 import numpy as np
 import talib
 from typing import Dict, Any, Callable, List, Optional
-from ehlers_indicators import FisherTransform, InstantaneousTrendline, CGOscillator, RelativeVigorIndex, CyberCycleOscillator, Decycler, BandPassFilter, SuperSmoother, RoofingFilter
-from ehlers_transformations import Stochasticization, Fisherization, CombinedTransformation
 
 class FunctionRegistry:
     """Registry for technical indicators and data access functions"""
-    
+
     def __init__(self):
         self.functions = {}
         self._current_dates = None  # numpy datetime64[D]
         self._bucket_cache = {}
-        # Lazy caches for Ehlers instances to avoid repeated allocations
-        self._ehlers_indicators_cache: Dict[str, Any] = {}
-        self._ehlers_transformations_cache: Dict[str, Any] = {}
         self._register_functions()
     
     def set_context(self, data: Dict[str, Any]):
@@ -131,22 +126,6 @@ class FunctionRegistry:
         self.functions['crossover'] = self._crossover
         self.functions['n_years_ago'] = self._n_years_ago
 
-        # Ehlers indicators (9) and transformations (3)
-        # Ehlers Indicators
-        self.functions['fisher_transform'] = self._fisher_transform
-        self.functions['instantaneous_trendline'] = self._instantaneous_trendline
-        self.functions['cg_oscillator'] = self._cg_oscillator
-        self.functions['relative_vigor_index'] = self._relative_vigor_index
-        self.functions['cyber_cycle_oscillator'] = self._cyber_cycle_oscillator
-        self.functions['decycler'] = self._decycler
-        self.functions['band_pass_filter'] = self._band_pass_filter
-        self.functions['super_smoother'] = self._super_smoother
-        self.functions['roofing_filter'] = self._roofing_filter
-        # Ehlers Transformations
-        self.functions['stochasticization'] = self._stochasticization
-        self.functions['fisherization'] = self._fisherization
-        self.functions['combined_transformation'] = self._combined_transformation
-    
     def get_function(self, name: str) -> Optional[Callable]:
         """Get function by name"""
         return self.functions.get(name)
@@ -892,77 +871,4 @@ class FunctionRegistry:
                 crossover[i] = True
         
         return crossover
-    # Ehlers Indicators Implementation
-    def _fisher_transform(self, close: np.ndarray, period: int = 10) -> np.ndarray:
-        """Fisher Transform"""
-        if not hasattr(self, '_fisher_transform_instance'):
-            self._fisher_transform_instance = FisherTransform(period)
-        return self._fisher_transform_instance.calculate(close)
-    
-    def _instantaneous_trendline(self, close: np.ndarray, alpha: float = 0.07) -> np.ndarray:
-        """Instantaneous Trendline"""
-        if not hasattr(self, '_instantaneous_trendline_instance'):
-            self._instantaneous_trendline_instance = InstantaneousTrendline(alpha)
-        return self._instantaneous_trendline_instance.calculate(close)
-    
-    def _cg_oscillator(self, close: np.ndarray, period: int = 10) -> np.ndarray:
-        """CG Oscillator"""
-        if not hasattr(self, '_cg_oscillator_instance'):
-            self._cg_oscillator_instance = CGOscillator(period)
-        return self._cg_oscillator_instance.calculate(close)
-    
-    def _relative_vigor_index(self, close: np.ndarray, period: int = 10) -> np.ndarray:
-        """Relative Vigor Index"""
-        if not hasattr(self, '_relative_vigor_index_instance'):
-            self._relative_vigor_index_instance = RelativeVigorIndex(period)
-        return self._relative_vigor_index_instance.calculate(close)
-    
-    def _cyber_cycle_oscillator(self, close: np.ndarray, period: int = 10) -> np.ndarray:
-        """Cyber Cycle Oscillator"""
-        if not hasattr(self, '_cyber_cycle_oscillator_instance'):
-            self._cyber_cycle_oscillator_instance = CyberCycleOscillator(period)
-        return self._cyber_cycle_oscillator_instance.calculate(close)
-    
-    def _decycler(self, close: np.ndarray, period: int = 40) -> np.ndarray:
-        """Decycler"""
-        if not hasattr(self, '_decycler_instance'):
-            self._decycler_instance = Decycler(period)
-        return self._decycler_instance.calculate(close)
-    
-    def _band_pass_filter(self, close: np.ndarray, low_cutoff: int = 10, high_cutoff: int = 20) -> np.ndarray:
-        """Band Pass Filter"""
-        if not hasattr(self, '_band_pass_filter_instance'):
-            self._band_pass_filter_instance = BandPassFilter(low_cutoff, high_cutoff)
-        return self._band_pass_filter_instance.calculate(close)
-    
-    def _super_smoother(self, close: np.ndarray, period: int = 10) -> np.ndarray:
-        """Super Smoother"""
-        if not hasattr(self, '_super_smoother_instance'):
-            self._super_smoother_instance = SuperSmoother(period)
-        return self._super_smoother_instance.calculate(close)
-    
-    def _roofing_filter(self, close: np.ndarray, period: int = 40) -> np.ndarray:
-        """Roofing Filter"""
-        if not hasattr(self, '_roofing_filter_instance'):
-            self._roofing_filter_instance = RoofingFilter(period)
-        return self._roofing_filter_instance.calculate(close)
-    
-    # Ehlers Transformations Implementation
-    def _stochasticization(self, close: np.ndarray, period: int = 10) -> np.ndarray:
-        """Stochasticization"""
-        if not hasattr(self, '_stochasticization_instance'):
-            self._stochasticization_instance = Stochasticization(period)
-        return self._stochasticization_instance.calculate(close)
-    
-    def _fisherization(self, close: np.ndarray, period: int = 10) -> np.ndarray:
-        """Fisherization"""
-        if not hasattr(self, '_fisherization_instance'):
-            self._fisherization_instance = Fisherization(period)
-        return self._fisherization_instance.calculate(close)
-    
-    def _combined_transformation(self, close: np.ndarray, period: int = 10) -> np.ndarray:
-        """Combined Transformation"""
-        if not hasattr(self, '_combined_transformation_instance'):
-            self._combined_transformation_instance = CombinedTransformation(period)
-        return self._combined_transformation_instance.calculate(close)
 
