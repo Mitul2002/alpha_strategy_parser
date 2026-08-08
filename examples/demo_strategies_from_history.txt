@@ -8,7 +8,7 @@
 # strategy TEXT itself: real, syntactically-valid, diverse strategies actually run
 # through the parser historically -- re-run them through the current engine for real numbers.
 
-# ===== CROSSOVER (261) =====
+# ===== CROSSOVER (250) =====
 
 # [historical, Sept 2025] signals=18909 symbols=1057 sharpe=0.0801 win_rate=0.4754 return=0.0051
 sma(close, 8) crossover sma(close, 21) AND willr(high, low, close, 14) > -35 AND var(close, 10) < 0.4
@@ -760,39 +760,6 @@ tf(stoch(high, low, close, 14) crossover 30, 'weekly') AND tf(macd(close, 12, 26
 # [historical, Sept 2025] signals=116586 symbols=1948 sharpe=0.0864 win_rate=0.4778 return=0.0042
 tf(stoch(high, low, close, 14) crossover 50, 'weekly') AND tf(macd(close, 12, 26, 9) > 0, 'monthly')
 
-# [historical, Sept 2025] signals=527379 symbols=2050 sharpe=0.0893 win_rate=0.4649 return=0.0088
-fisher_transform(close, 10) crossover 0
-
-# [historical, Sept 2025] signals=21443 symbols=2050 sharpe=-0.1548 win_rate=0.4475 return=0.0103
-instantaneous_trendline(close, 0.07) crossover close
-
-# [historical, Sept 2025] signals=674116 symbols=2050 sharpe=0.0883 win_rate=0.4653 return=0.0085
-cg_oscillator(close, 10) crossover 0
-
-# [historical, Sept 2025] signals=451865 symbols=2050 sharpe=0.0852 win_rate=0.4653 return=0.0085
-relative_vigor_index(close, 10) crossover 0
-
-# [historical, Sept 2025] signals=1633203 symbols=2050 sharpe=0.0875 win_rate=0.4796 return=0.0082
-cyber_cycle_oscillator(close, 10) crossover 0
-
-# [historical, Sept 2025] signals=255 symbols=2050 sharpe=-0.0986 win_rate=0.3866 return=0.0025
-decycler(close, 40) crossover close
-
-# [historical, Sept 2025] signals=404672 symbols=2050 sharpe=0.0828 win_rate=0.4613 return=0.0083
-band_pass_filter(close, 10, 20) crossover 0
-
-# [historical, Sept 2025] signals=527471 symbols=2050 sharpe=0.0570 win_rate=0.4690 return=0.0052
-super_smoother(close, 10) crossover close
-
-# [historical, Sept 2025] signals=255 symbols=2050 sharpe=-0.0986 win_rate=0.3866 return=0.0025
-roofing_filter(close, 40) crossover close
-
-# [historical, Sept 2025] signals=526661 symbols=2050 sharpe=0.0892 win_rate=0.4650 return=0.0088
-fisher_transform(close, 10) crossover 0 AND rsi(close, 14) > 20
-
-# [historical, Sept 2025] signals=107 symbols=2050 sharpe=-0.4935 win_rate=0.3712 return=0.0329
-cyber_cycle_oscillator(close, 10) crossover 0 AND decycler(close, 40) > close
-
 # ===== TF (162) =====
 
 # [historical, Sept 2025] signals=1174060 symbols=1948 sharpe=0.0456 win_rate=0.4661 return=0.0020
@@ -1281,7 +1248,7 @@ tf(countstreak(close > sma(close, 20), 7) >= 3, 'daily') AND tf(n_weeks_ago(ema(
 # [historical, Sept 2025] signals=1660202 symbols=1957 sharpe=0.0217 win_rate=0.4612 return=0.0011
 tf(countstreak(close > sma(close, 20), 7) >= 5, 'daily') AND tf(n_weeks_ago(ema(close, 21), 3) < ema(close, 21), 'weekly')
 
-# ===== BASIC (158) =====
+# ===== BASIC (124) =====
 
 # [historical, Sept 2025] signals=2848652 symbols=2050 sharpe=1.0280 win_rate=0.4683 return=0.0059
 ema(close, 50) > ema(close, 200) AND rsi(close, 14) > 40
@@ -1654,108 +1621,6 @@ close > 0
 
 # [historical, Sept 2025] signals=1369833 symbols=2050 sharpe=0.0669 win_rate=0.4638 return=0.0090
 rsi(close,14) > 60
-
-# [historical, Sept 2025] signals=2990086 symbols=2050 sharpe=0.0781 win_rate=0.4633 return=0.0082
-fisher_transform(close, 10) > 0
-
-# [historical, Sept 2025] signals=2094061 symbols=2050 sharpe=0.0827 win_rate=0.4653 return=0.0094
-fisher_transform(close, 10) > 0.5
-
-# [historical, Sept 2025] signals=2343245 symbols=2050 sharpe=0.0722 win_rate=0.4942 return=0.0061
-fisher_transform(close, 10) < -0.5
-
-# [historical, Sept 2025] signals=2053780 symbols=2050 sharpe=0.3733 win_rate=0.5345 return=0.0359
-instantaneous_trendline(close, 0.07) > close
-
-# [historical, Sept 2025] signals=4208984 symbols=2050 sharpe=-0.0792 win_rate=0.4525 return=-0.0015
-close > instantaneous_trendline(close, 0.07)
-
-# [historical, Sept 2025] signals=2037334 symbols=2050 sharpe=0.2070 win_rate=0.5133 return=0.0220
-instantaneous_trendline(close, 0.07) > sma(close, 20)
-
-# [historical, Sept 2025] signals=2984453 symbols=2050 sharpe=0.0803 win_rate=0.4636 return=0.0085
-cg_oscillator(close, 10) > 0
-
-# [historical, Sept 2025] signals=2708305 symbols=2050 sharpe=0.0772 win_rate=0.4642 return=0.0084
-cg_oscillator(close, 10) > 0.1
-
-# [historical, Sept 2025] signals=2940098 symbols=2050 sharpe=0.0605 win_rate=0.4876 return=0.0047
-cg_oscillator(close, 10) < -0.1
-
-# [historical, Sept 2025] signals=3061113 symbols=2050 sharpe=0.0784 win_rate=0.4657 return=0.0081
-relative_vigor_index(close, 10) > 0
-
-# [historical, Sept 2025] signals=734590 symbols=2050 sharpe=0.0549 win_rate=0.4654 return=0.0091
-relative_vigor_index(close, 10) > 0.5
-
-# [historical, Sept 2025] signals=3082165 symbols=2050 sharpe=0.0934 win_rate=0.4804 return=0.0094
-cyber_cycle_oscillator(close, 10) > 0
-
-# [historical, Sept 2025] signals=652677 symbols=2050 sharpe=-0.0228 win_rate=0.4579 return=-0.0016
-cyber_cycle_oscillator(close, 10) > 0.2
-
-# [historical, Sept 2025] signals=672800 symbols=2050 sharpe=-0.0599 win_rate=0.4435 return=-0.0071
-cyber_cycle_oscillator(close, 10) < -0.2
-
-# [historical, Sept 2025] signals=751 symbols=2050 sharpe=0.0287 win_rate=0.4545 return=0.0454
-decycler(close, 40) > close
-
-# [historical, Sept 2025] signals=6262112 symbols=2050 sharpe=0.0765 win_rate=0.4763 return=0.0072
-close > decycler(close, 40)
-
-# [historical, Sept 2025] signals=17 symbols=2050 sharpe=2.7469 win_rate=0.5833 return=0.2408
-decycler(close, 40) > sma(close, 20)
-
-# [historical, Sept 2025] signals=3148224 symbols=2050 sharpe=0.0868 win_rate=0.4669 return=0.0089
-band_pass_filter(close, 10, 20) > 0
-
-# [historical, Sept 2025] signals=2301254 symbols=2050 sharpe=0.0661 win_rate=0.4636 return=0.0070
-band_pass_filter(close, 10, 20) > 0.1
-
-# [historical, Sept 2025] signals=2092642 symbols=2050 sharpe=0.0519 win_rate=0.4922 return=0.0036
-band_pass_filter(close, 10, 20) < -0.1
-
-# [historical, Sept 2025] signals=3224098 symbols=2050 sharpe=0.0653 win_rate=0.4858 return=0.0056
-super_smoother(close, 10) > close
-
-# [historical, Sept 2025] signals=3040622 symbols=2050 sharpe=0.0842 win_rate=0.4649 return=0.0089
-close > super_smoother(close, 10)
-
-# [historical, Sept 2025] signals=3101120 symbols=2050 sharpe=0.0883 win_rate=0.4710 return=0.0087
-super_smoother(close, 10) > sma(close, 20)
-
-# [historical, Sept 2025] signals=751 symbols=2050 sharpe=0.0287 win_rate=0.4545 return=0.0454
-roofing_filter(close, 40) > close
-
-# [historical, Sept 2025] signals=6262112 symbols=2050 sharpe=0.0765 win_rate=0.4763 return=0.0072
-close > roofing_filter(close, 40)
-
-# [historical, Sept 2025] signals=17 symbols=2050 sharpe=2.7469 win_rate=0.5833 return=0.2408
-roofing_filter(close, 40) > sma(close, 20)
-
-# [historical, Sept 2025] signals=874085 symbols=2050 sharpe=0.3410 win_rate=0.5156 return=0.0259
-fisher_transform(close, 10) > 0 AND instantaneous_trendline(close, 0.07) > close
-
-# [historical, Sept 2025] signals=2260151 symbols=2050 sharpe=0.0829 win_rate=0.4651 return=0.0093
-cg_oscillator(close, 10) > 0 AND relative_vigor_index(close, 10) > 0
-
-# [historical, Sept 2025] signals=313 symbols=2050 sharpe=0.0258 win_rate=0.4315 return=0.0560
-cyber_cycle_oscillator(close, 10) > 0 AND decycler(close, 40) > close
-
-# [historical, Sept 2025] signals=330550 symbols=2050 sharpe=0.0657 win_rate=0.4757 return=0.0057
-band_pass_filter(close, 10, 20) > 0 AND super_smoother(close, 10) > close
-
-# [historical, Sept 2025] signals=22 symbols=2050 sharpe=-4.6073 win_rate=0.3810 return=-0.0194
-roofing_filter(close, 40) > close AND fisher_transform(close, 10) > 0
-
-# [historical, Sept 2025] signals=903260 symbols=2050 sharpe=0.4463 win_rate=0.5123 return=0.0254
-instantaneous_trendline(close, 0.07) > super_smoother(close, 10) AND close > sma(close, 20)
-
-# [historical, Sept 2025] signals=711324 symbols=2050 sharpe=0.0568 win_rate=0.4659 return=0.0095
-cg_oscillator(close, 10) > 0 AND relative_vigor_index(close, 10) > 0.5
-
-# [historical, Sept 2025] signals=725 symbols=2050 sharpe=0.0315 win_rate=0.4555 return=0.0461
-band_pass_filter(close, 10, 20) > 0 AND roofing_filter(close, 40) > close
 
 # ===== LAG (36) =====
 
