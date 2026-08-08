@@ -1,0 +1,30 @@
+EHLERS MAIN ENGINE INTEGRATION REPORT
+==================================================
+Ehlers Indicators: 9
+Transformations: 3
+Strategies: 50
+Available Symbols: 0
+
+Available Ehlers Indicators:
+  - fisher_transform
+  - instantaneous_trendline
+  - cg_oscillator
+  - relative_vigor_index
+  - cyber_cycle_oscillator
+  - decycler
+  - band_pass_filter
+  - super_smoother
+  - roofing_filter
+
+Available Transformations:
+  - stochasticization
+  - fisherization
+  - combined_transformation
+
+Strategy Categories:
+  Base Indicators (1-9): 9 strategies
+  Stochasticized (10-18): 9 strategies
+  Fisherized (19-27): 9 strategies
+  Combined Transform (28-36): 9 strategies
+  Extreme Signals (37-45): 9 strategies
+  Special Combinations (46-50): 5 strategies

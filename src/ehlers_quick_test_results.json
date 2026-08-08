@@ -1,0 +1,321 @@
+{
+  "indicators": {
+    "fisher_transform": {
+      "execution_time_ms": 29.76811200096563,
+      "total_signals": 4044,
+      "signal_percentage": 53.28765318223745,
+      "avg_value": 0.19357553470353137,
+      "std_value": 2.3675723074537833,
+      "min_value": -3.8002011672502,
+      "max_value": 3.8002011672502
+    },
+    "instantaneous_trendline": {
+      "execution_time_ms": 2.2231200000533136,
+      "total_signals": 7589,
+      "signal_percentage": 100.0,
+      "avg_value": 16.84987953317447,
+      "std_value": 0.5853987358019415,
+      "min_value": 8.922743440000149,
+      "max_value": 23.484496940000145
+    },
+    "cg_oscillator": {
+      "execution_time_ms": 4.762761000165483,
+      "total_signals": 4038,
+      "signal_percentage": 53.208591382263805,
+      "avg_value": 0.5741300448708314,
+      "std_value": 10.577783737012036,
+      "min_value": -77.51112862018175,
+      "max_value": 77.3909754545457
+    },
+    "relative_vigor_index": {
+      "execution_time_ms": 11.704604999977164,
+      "total_signals": 4076,
+      "signal_percentage": 53.70931611543023,
+      "avg_value": 0.042693435558196206,
+      "std_value": 0.3953008600315124,
+      "min_value": -0.9877292495516935,
+      "max_value": 1.0
+    },
+    "cyber_cycle_oscillator": {
+      "execution_time_ms": 4.987219999748049,
+      "total_signals": 3709,
+      "signal_percentage": 48.87336935037555,
+      "avg_value": 0.00015331543199169,
+      "std_value": 0.31214933501342523,
+      "min_value": -4.542521618414595,
+      "max_value": 3.1544568391781964
+    },
+    "decycler": {
+      "execution_time_ms": 1.8719409999903291,
+      "total_signals": 4422,
+      "signal_percentage": 58.26854658057715,
+      "avg_value": 0.23218610233250114,
+      "std_value": 1.427184678369858,
+      "min_value": -8.830974991537323,
+      "max_value": 16.85603499
+    },
+    "band_pass_filter": {
+      "execution_time_ms": 1.8171589999838034,
+      "total_signals": 4211,
+      "signal_percentage": 55.48820661483727,
+      "avg_value": 0.2135671367277751,
+      "std_value": 1.8862437293374554,
+      "min_value": -12.899211413541922,
+      "max_value": 16.85603499
+    },
+    "super_smoother": {
+      "execution_time_ms": 2.359284000704065,
+      "total_signals": 7589,
+      "signal_percentage": 100.0,
+      "avg_value": 326.37797939932614,
+      "std_value": 406.3781902097486,
+      "min_value": 7.342063291120915,
+      "max_value": 1573.8704486004037
+    },
+    "roofing_filter": {
+      "execution_time_ms": 1.8561209999461425,
+      "total_signals": 4422,
+      "signal_percentage": 58.26854658057715,
+      "avg_value": 0.23218610233250114,
+      "std_value": 1.427184678369858,
+      "min_value": -8.830974991537323,
+      "max_value": 16.85603499
+    }
+  },
+  "transformations": {
+    "stochasticization": {
+      "execution_time_ms": 20.878932000414352,
+      "total_signals": 5809,
+      "signal_percentage": 76.54499934115167,
+      "avg_value": 50.67021404220661,
+      "std_value": 40.040775443240605,
+      "min_value": 0.0,
+      "max_value": 100.00000000000001
+    },
+    "fisherization": {
+      "execution_time_ms": 36.79366899996239,
+      "total_signals": 3829,
+      "signal_percentage": 50.45460534984847,
+      "avg_value": 0.07542370198497596,
+      "std_value": 2.7236112173506433,
+      "min_value": -3.8002011672502,
+      "max_value": 3.8002011672502
+    },
+    "combined_transformation": {
+      "execution_time_ms": 56.84759499854408,
+      "total_signals": 3803,
+      "signal_percentage": 50.11200421662934,
+      "avg_value": 0.07437429425596265,
+      "std_value": 2.9905294449675193,
+      "min_value": -3.8002011672502,
+      "max_value": 3.8002011672502
+    }
+  },
+  "strategies": {
+    "strategy_01": {
+      "strategy_name": "Fisher Transform Base",
+      "total_signals": 4044,
+      "signal_percentage": 53.28765318223745,
+      "avg_indicator_value": 0.19357553470353137,
+      "sample_trades": [
+        {
+          "date_index": 9,
+          "price": 16.49422499,
+          "indicator_value": 0.5637979385656412,
+          "signal_type": "threshold"
+        },
+        {
+          "date_index": 13,
+          "price": 16.08984999,
+          "indicator_value": 0.28355184571540415,
+          "signal_type": "threshold"
+        },
+        {
+          "date_index": 14,
+          "price": 16.15369999,
+          "indicator_value": 0.41236327772100456,
+          "signal_type": "threshold"
+        },
+        {
+          "date_index": 15,
+          "price": 16.30267999,
+          "indicator_value": 0.7877704306781684,
+          "signal_type": "threshold"
+        },
+        {
+          "date_index": 16,
+          "price": 16.19626499,
+          "indicator_value": 0.5058004558392404,
+          "signal_type": "threshold"
+        },
+        {
+          "date_index": 17,
+          "price": 16.18561999,
+          "indicator_value": 0.29196428535474417,
+          "signal_type": "threshold"
+        },
+        {
+          "date_index": 18,
+          "price": 16.13241499,
+          "indicator_value": 0.16188942211061008,
+          "signal_type": "threshold"
+        },
+        {
+          "date_index": 20,
+          "price": 16.18561999,
+          "indicator_value": 0.7766520444238506,
+          "signal_type": "threshold"
+        },
+        {
+          "date_index": 34,
+          "price": 14.67453999,
+          "indicator_value": 0.8370045316496575,
+          "signal_type": "threshold"
+        },
+        {
+          "date_index": 35,
+          "price": 14.42978499,
+          "indicator_value": 0.04168508443108845,
+          "signal_type": "threshold"
+        }
+      ]
+    },
+    "strategy_10": {
+      "strategy_name": "Fisher Transform Stochastic",
+      "total_signals": 3829,
+      "signal_percentage": 50.45460534984847,
+      "avg_indicator_value": 50.67021404220661,
+      "sample_trades": [
+        {
+          "date_index": 18,
+          "price": 16.13241499,
+          "indicator_value": 55.16503389172806,
+          "signal_type": "threshold"
+        },
+        {
+          "date_index": 20,
+          "price": 16.18561999,
+          "indicator_value": 99.20353475490187,
+          "signal_type": "threshold"
+        },
+        {
+          "date_index": 24,
+          "price": 15.45136499,
+          "indicator_value": 57.73639004129808,
+          "signal_type": "threshold"
+        },
+        {
+          "date_index": 27,
+          "price": 14.32336999,
+          "indicator_value": 56.19207536274155,
+          "signal_type": "threshold"
+        },
+        {
+          "date_index": 28,
+          "price": 14.67453999,
+          "indicator_value": 71.1818871399779,
+          "signal_type": "threshold"
+        },
+        {
+          "date_index": 29,
+          "price": 14.64261499,
+          "indicator_value": 70.24841812521677,
+          "signal_type": "threshold"
+        },
+        {
+          "date_index": 30,
+          "price": 14.40850499,
+          "indicator_value": 84.3062808092222,
+          "signal_type": "threshold"
+        },
+        {
+          "date_index": 31,
+          "price": 14.45106999,
+          "indicator_value": 95.51299945307545,
+          "signal_type": "threshold"
+        },
+        {
+          "date_index": 32,
+          "price": 14.60004999,
+          "indicator_value": 100.0,
+          "signal_type": "threshold"
+        },
+        {
+          "date_index": 33,
+          "price": 14.47234999,
+          "indicator_value": 92.98828068037487,
+          "signal_type": "threshold"
+        }
+      ]
+    },
+    "strategy_19": {
+      "strategy_name": "Fisher Transform Fisher",
+      "total_signals": 3829,
+      "signal_percentage": 50.45460534984847,
+      "avg_indicator_value": 0.07542370198497596,
+      "sample_trades": [
+        {
+          "date_index": 18,
+          "price": 16.13241499,
+          "indicator_value": 0.10367049004985296,
+          "signal_type": "threshold"
+        },
+        {
+          "date_index": 20,
+          "price": 16.18561999,
+          "indicator_value": 2.412372715689171,
+          "signal_type": "threshold"
+        },
+        {
+          "date_index": 24,
+          "price": 15.45136499,
+          "indicator_value": 0.15598061010799463,
+          "signal_type": "threshold"
+        },
+        {
+          "date_index": 27,
+          "price": 14.32336999,
+          "indicator_value": 0.12448050518424181,
+          "signal_type": "threshold"
+        },
+        {
+          "date_index": 28,
+          "price": 14.67453999,
+          "indicator_value": 0.452117141873338,
+          "signal_type": "threshold"
+        },
+        {
+          "date_index": 29,
+          "price": 14.64261499,
+          "indicator_value": 0.42957774366507573,
+          "signal_type": "threshold"
+        },
+        {
+          "date_index": 30,
+          "price": 14.40850499,
+          "indicator_value": 0.8405978934552063,
+          "signal_type": "threshold"
+        },
+        {
+          "date_index": 31,
+          "price": 14.45106999,
+          "indicator_value": 1.5290389546329703,
+          "signal_type": "threshold"
+        },
+        {
+          "date_index": 32,
+          "price": 14.60004999,
+          "indicator_value": 3.8002011672502,
+          "signal_type": "threshold"
+        },
+        {
+          "date_index": 33,
+          "price": 14.47234999,
+          "indicator_value": 1.292445266670727,
+          "signal_type": "threshold"
+        }
+      ]
+    }
+  },
+  "timestamp": "2025-09-12 11:59:23"
+}

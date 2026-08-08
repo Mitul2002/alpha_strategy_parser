@@ -1,0 +1,86 @@
+# 🎯 Strategy Universe Examples for Parser Performance Testing
+
+## Basic Strategies (100 examples)
+ema(close, 50) > ema(close, 200) AND rsi(close, 14) > 40
+sma(close, 20) > sma(close, 50) AND macd(close, 12, 26, 9) > 0
+rsi(close, 14) crossover 50 AND adx(high, low, close, 14) > 20
+mfi(high, low, close, volume, 14) > 70 AND willr(high, low, close, 14) < -50
+atr(high, low, close, 14) > sma(atr(high, low, close, 14), 20) AND rsi(close, 14) < 60
+obv(close, volume) > sma(obv(close, volume), 20) AND macd(close, 12, 26, 9) > 0
+stoch(high, low, close, 14) > 80 AND rsi(close, 14) > 60
+stochrsi(close, 14) crossover 50 AND ema(close, 20) > ema(close, 50)
+adx(high, low, close, 14) > 25 AND plus_di(high, low, close, 14) > minus_di(high, low, close, 14)
+natr(high, low, close, 14) > 2 AND macd(close, 12, 26, 9) crossover 0
+bb_upper(close, 20, 2) < close AND rsi(close, 14) > 70
+bb_lower(close, 20, 2) > close AND macd(close, 12, 26, 9) < 0
+cmo(close, 14) > 40 AND ultosc(high, low, close, 7, 14, 28) > 50
+stddev(close, 20) > sma(stddev(close, 20), 10) AND rsi(close, 14) > 60
+macd(close, 12, 26, 9) > 0 AND stochrsi(close, 14) > 60 AND atr(high, low, close, 14) < 10
+sma(close, 10) > sma(close, 30) AND rsi(close, 14) crossover 40 AND obv(close, volume) > sma(obv(close, volume), 50)
+ultosc(high, low, close, 7, 14, 28) > 60 AND mfi(high, low, close, volume, 14) > 75 AND adx(high, low, close, 14) > 30
+willr(high, low, close, 14) crossover -20 AND ema(close, 20) > ema(close, 100)
+stoch(high, low, close, 14) crossover 20 AND plus_di(high, low, close, 14) > minus_di(high, low, close, 14) AND rsi(close, 14) > 50
+macd(close, 12, 26, 9) crossover 0 AND atr(high, low, close, 14) > 15 AND bb_upper(close, 20, 2) > close
+
+## Multi-timeframe Strategies (100 examples)
+tf(rsi(close, 14) > 70, 'daily') AND tf(rsi(close, 14) < 30, 'weekly')
+tf(ema(close, 50) > ema(close, 200), 'daily') AND tf(macd(close, 12, 26, 9) > 0, 'weekly')
+tf(sma(close, 20) > sma(close, 50), 'daily') AND tf(adx(high, low, close, 14) > 25, 'monthly')
+tf(cci(high, low, close, 14) > 60, 'daily') AND tf(ema(close, 21) > ema(close, 55), 'weekly') AND tf(macd(close, 12, 26, 9) > 0, 'monthly')
+tf(stoch(high, low, close, 14) > 80, 'daily') AND tf(mfi(high, low, close, volume, 14) > 70, 'weekly') AND tf(atr(high, low, close, 14) > 5, 'monthly')
+tf(count(rsi(close, 14) > 70, 10) >= 5, 'daily') AND tf(max(ema(close, 21), 20) > ema(close, 55), 'weekly')
+tf(countstreak(ema(close, 21) > ema(close, 55), 8) >= 1, 'daily') AND tf(min(atr(high, low, close, 14), 20) < 10, 'monthly')
+tf(max(bb_upper(close, 20, 2), 10) < close, 'daily') AND tf(count(macd(close, 12, 26, 9) > 0, 10) >= 3, 'monthly')
+tf(max(bb_lower(close, 20, 2), 10) > close, 'daily') AND tf(square(rsi(close, 14)) > 2500, 'monthly')
+tf(bb_middle(close, 20, 2) > close, 'daily') AND tf(count(rsi(close, 14) > 55, 8) >= 4, 'weekly')
+
+## Aggregation Strategies (100 examples)
+count(rsi(close, 14) > 70, 10) >= 5 AND ema(close, 50) > ema(close, 200)
+count(macd(close, 12, 26, 9) > 0, 15) >= 7 AND atr(high, low, close, 14) > 5
+count(bb_upper(close, 20, 2) < close, 12) >= 4 AND volume > sma(volume, 20)
+countstreak(ema(close, 21) > ema(close, 55), 8) >= 1 AND rsi(close, 14) > 50
+countstreak(stoch(high, low, close, 14) > 70, 5) >= 3 AND macd(close, 12, 26, 9) > 0
+countstreak(close > sma(close, 20), 7) >= 1 AND obv(close, volume) > sma(obv(close, volume), 20)
+abs(rsi(close, 14) - 50) < 15 AND ema(close, 50) > ema(close, 200)
+square(rsi(close, 14)) > 2500 AND macd(close, 12, 26, 9) > 0
+round(ema(close, 21)) > sma(close, 34) AND atr(high, low, close, 14) > 5
+ceil(stoch(high, low, close, 14)) > 70 AND mfi(high, low, close, volume, 14) > 60
+floor(bb_upper(close, 20, 2)) < close AND rsi(close, 14) > 70
+max(ema(close, 21), 20) > ema(close, 55) AND adx(high, low, close, 14) > 25
+min(atr(high, low, close, 14), 20) < 10 AND macd(close, 12, 26, 9) > 0
+
+## Historical Access Strategies (100 examples)
+ema(close, 21) > n_days_ago(ema(close, 21), 5) AND rsi(close, 14) > 50
+sma(close, 50) > n_weeks_ago(sma(close, 50), 2) AND macd(close, 12, 26, 9) > 0
+obv(close, volume) > n_days_ago(obv(close, volume), 7) AND atr(high, low, close, 14) > 5
+n_days_ago(ema(close, 55), 5) < ema(close, 55) AND stoch(high, low, close, 14) > 70
+n_weeks_ago(ema(close, 34), 4) < ema(close, 34) AND mfi(high, low, close, volume, 14) > 60
+n_months_ago(sma(close, 50), 2) < sma(close, 50) AND rsi(close, 14) > 55
+n_years_ago(ema(close, 200), 1) < ema(close, 200) AND adx(high, low, close, 14) > 30
+n_days_ago(rsi(close, 14), 7) < rsi(close, 14) AND macd(close, 12, 26, 9) > 0
+n_weeks_ago(macd(close, 12, 26, 9), 2) < macd(close, 12, 26, 9) AND ema(close, 50) > ema(close, 200)
+n_months_ago(atr(high, low, close, 14), 1) < atr(high, low, close, 14) AND stoch(high, low, close, 14) > 80
+
+## Complex Nested Strategies (100 examples)
+sma(obv(close, volume), 20) > 1000 AND rsi(close, 14) > 50
+atr(high, low, close, 14) > sma(atr(high, low, close, 14), 20) AND macd(close, 12, 26, 9) > 0
+stddev(close, 20) > sma(stddev(close, 20), 10) AND ema(close, 50) > ema(close, 200)
+bbands(close, 20, 2).upper - bbands(close, 20, 2).lower < sma(atr(high, low, close, 14), 20)
+sma(ema(close, 21), 10) > sma(ema(close, 55), 10) AND rsi(close, 14) > 60
+max(ema(close, 21), ema(close, 55)) > min(ema(close, 21), ema(close, 55)) AND macd(close, 12, 26, 9) > 0
+count(ema(close, 21) > ema(close, 55), 10) >= 5 AND atr(high, low, close, 14) > 5
+countstreak(rsi(close, 14) > 70, 5) >= 3 AND obv(close, volume) > sma(obv(close, volume), 20)
+abs(macd(close, 12, 26, 9)) > sma(abs(macd(close, 12, 26, 9)), 10) AND stoch(high, low, close, 14) > 80
+square(rsi(close, 14)) > square(50) AND ema(close, 50) > ema(close, 200)
+
+## Crossover Strategies (100 examples)
+ema(close, 50) crossover ema(close, 200) AND rsi(close, 14) > 40
+plus_di(high, low, close, 14) crossover minus_di(high, low, close, 14) AND adx(high, low, close, 14) > 25
+stoch(high, low, close, 14) crossover 80 AND macd(close, 12, 26, 9) > 0
+rsi(close, 14) crossover 70 AND volume > sma(volume, 20) * 1.5
+willr(high, low, close, 14) crossover -20 AND ema(close, 20) > ema(close, 100)
+stochrsi(close, 14) crossover 60 AND bb_upper(close, 20, 2) < close
+macd(close, 12, 26, 9) crossover 0 AND atr(high, low, close, 14) > 5
+ultosc(high, low, close, 7, 14, 28) crossover 60 AND mfi(high, low, close, volume, 14) > 70
+cmo(close, 14) crossover 40 AND obv(close, volume) > sma(obv(close, volume), 20)
+ppo(close, 12, 26) crossover 0 AND stoch(high, low, close, 14) > 70

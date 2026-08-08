@@ -1,0 +1,106 @@
+ema(close, 50) > ema(close, 200) AND rsi(close, 14) > 40
+sma(close, 20) > sma(close, 50) AND macd(close, 12, 26, 9) > 0
+rsi(close, 14) crossover 50 AND adx(high, low, close, 14) > 20
+mfi(high, low, close, volume, 14) > 70 AND willr(high, low, close, 14) < -50
+atr(high, low, close, 14) > sma(atr(high, low, close, 14), 20) AND rsi(close, 14) < 60
+obv(close, volume) > sma(obv(close, volume), 20) AND macd(close, 12, 26, 9) > 0
+stoch(high, low, close, 14) > 80 AND rsi(close, 14) > 60
+stochrsi(close, 14) crossover 50 AND ema(close, 20) > ema(close, 50)
+adx(high, low, close, 14) > 25 AND plus_di(high, low, close, 14) > minus_di(high, low, close, 14)
+natr(high, low, close, 14) > 2 AND macd(close, 12, 26, 9) crossover 0
+bbands(close, 20, 2).upper < close AND rsi(close, 14) > 70
+bbands(close, 20, 2).lower > close AND macd(close, 12, 26, 9) < 0
+cmo(close, 14) > 40 AND ultosc(high, low, close, 7, 14, 28) > 50
+stddev(close, 20) > sma(stddev(close, 20), 10) AND rsi(close, 14) > 60
+macd(close, 12, 26, 9) > 0 AND stochrsi(close, 14) > 60 AND atr(high, low, close, 14) < 10
+sma(close, 10) > sma(close, 30) AND rsi(close, 14) crossover 40 AND obv(close, volume) > sma(obv(close, volume), 50)
+ultosc(high, low, close, 7, 14, 28) > 60 AND mfi(high, low, close, volume, 14) > 75 AND adx(high, low, close, 14) > 30
+willr(high, low, close, 14) crossover -20 AND ema(close, 20) > ema(close, 100)
+stoch(high, low, close, 14) crossover 20 AND plus_di(high, low, close, 14) > minus_di(high, low, close, 14) AND rsi(close, 14) > 50
+macd(close, 12, 26, 9) crossover 0 AND atr(high, low, close, 14) > 15 AND bbands(close, 20, 2).upper > close
+ema(close, 50) > ema(close, 200) AND mfi(high, low, close, volume, 14) < 30 AND willr(high, low, close, 14) < -70
+stochrsi(close, 14) > 80 AND ultosc(high, low, close, 7, 14, 28) > 70 AND obv(close, volume) > sma(obv(close, volume), 30)
+atr(high, low, close, 14) > sma(atr(high, low, close, 14), 20) AND stddev(close, 20) > sma(stddev(close, 20), 15) AND rsi(close, 14) < 50
+sma(close, 50) < sma(close, 200) AND macd(close, 12, 26, 9) < 0 AND stoch(high, low, close, 14) < 20
+ema(close, 20) > ema(close, 100) AND stochrsi(close, 14) crossover 40 AND mfi(high, low, close, volume, 14) > 60 AND adx(high, low, close, 14) > 25
+ema(close, 20) > ema(close, 50) AND rsi(close, 14) > 60 AND obv(close, volume) > sma(obv(close, volume), 20)
+macd(close, 12, 26, 9) crossover 0 AND atr(high, low, close, 14) > 5 AND stochrsi(close, 14) > 70
+sma(close, 30) > sma(close, 100) AND mfi(high, low, close, volume, 14) < 40 AND adx(high, low, close, 14) > 25
+bbands(close, 20, 2).upper < close AND rsi(close, 14) > 70 AND willr(high, low, close, 14) < -10
+stoch(high, low, close, 14) crossover 80 AND ultosc(high, low, close, 7, 14, 28) > 55 AND atr(high, low, close, 14) < 15
+plus_di(high, low, close, 14) > minus_di(high, low, close, 14) AND macd(close, 12, 26, 9) > 0 AND sma(close, 20) > sma(close, 50)
+ema(close, 100) > ema(close, 200) AND stddev(close, 20) > sma(stddev(close, 20), 10) AND mfi(high, low, close, volume, 14) > 65
+cmo(close, 14) > 40 AND rsi(close, 14) > 50 AND obv(close, volume) > sma(obv(close, volume), 50)
+sma(close, 20) < sma(close, 100) AND macd(close, 12, 26, 9) < 0 AND stoch(high, low, close, 14) < 30
+bbands(close, 20, 2).lower > close AND stochrsi(close, 14) < 20 AND mfi(high, low, close, volume, 14) < 30
+ema(close, 50) crossover ema(close, 200) AND adx(high, low, close, 14) > 20 AND ultosc(high, low, close, 7, 14, 28) > 60
+sma(close, 10) > sma(close, 30) AND atr(high, low, close, 14) < 10 AND macd(close, 12, 26, 9) > 0
+stoch(high, low, close, 14) crossover 50 AND mfi(high, low, close, volume, 14) > 70 AND stddev(close, 20) > 10
+rsi(close, 14) < 30 AND bbands(close, 20, 2).lower > close AND macd(close, 12, 26, 9) < 0
+ema(close, 20) > ema(close, 50) AND stochrsi(close, 14) > 60 AND ultosc(high, low, close, 7, 14, 28) > 65
+plus_di(high, low, close, 14) crossover minus_di(high, low, close, 14) AND obv(close, volume) > sma(obv(close, volume), 20) AND rsi(close, 14) > 55
+sma(close, 50) > sma(close, 200) AND atr(high, low, close, 14) > 12 AND stoch(high, low, close, 14) > 60 AND mfi(high, low, close, volume, 14) > 70
+macd(close, 12, 26, 9) crossover 0 AND adx(high, low, close, 14) > 30 AND willr(high, low, close, 14) < -40
+bbands(close, 20, 2).upper < close AND stddev(close, 20) > 15 AND ultosc(high, low, close, 7, 14, 28) > 70
+ema(close, 20) < ema(close, 200) AND atr(high, low, close, 14) > 20 AND obv(close, volume) < sma(obv(close, volume), 50)
+sma(close, 30) > sma(close, 90) AND stoch(high, low, close, 14) > 80 AND macd(close, 12, 26, 9) > 0 AND rsi(close, 14) > 60
+stochrsi(close, 14) crossover 60 AND bbands(close, 20, 2).upper < close AND adx(high, low, close, 14) > 25
+plus_di(high, low, close, 14) > minus_di(high, low, close, 14) AND obv(close, volume) > sma(obv(close, volume), 100) AND mfi(high, low, close, volume, 14) > 55
+ema(close, 50) > ema(close, 200) AND ultosc(high, low, close, 7, 14, 28) > 65 AND atr(high, low, close, 14) > 10 AND macd(close, 12, 26, 9) > 0
+sma(close, 20) < sma(close, 200) AND stoch(high, low, close, 14) < 25 AND rsi(close, 14) < 30 AND mfi(high, low, close, volume, 14) < 40
+ema(close, 21) crossover ema(close, 55) AND adx(high, low, close, 14) > 22 AND count(rsi(close, 14) > 60, 10) >= 3
+macd(close, 12, 26, 9) crossover 0 AND bbands(close, 20, 2).upper - bbands(close, 20, 2).lower < sma(atr(high, low, close, 14), 20)
+rsi(close, 14) crossover 50 AND mfi(high, low, close, volume, 14) > 65 AND obv(close, volume) > sma(obv(close, volume), 34)
+stoch(high, low, close, 14) crossover 20 AND plus_di(high, low, close, 14) > minus_di(high, low, close, 14) AND atr(high, low, close, 14) < 12
+ema(close, 50) > ema(close, 200) AND n_days_ago(ema(close, 50), 5) < ema(close, 50) AND rsi(close, 14) > 55
+bbands(close, 20, 2).lower > close AND stochrsi(close, 14) < 20 AND count(close < n_days_ago(close, 1), 5) >= 3
+sma(close, 20) crossover sma(close, 50) AND adx(high, low, close, 14) > 25 AND willr(high, low, close, 14) > -50
+stddev(close, 20) > sma(stddev(close, 20), 10) AND macd(close, 12, 26, 9) > 0 AND rsi(close, 14) > 60
+ema(close, 13) crossover sma(close, 34) AND bbands(close, 20, 2).upper < close AND n_days_ago(rsi(close, 14), 3) < 60
+ultosc(high, low, close, 7, 14, 28) > 60 AND mfi(high, low, close, volume, 14) > 70 AND atr(high, low, close, 14) < sma(atr(high, low, close, 14), 30)
+plus_di(high, low, close, 14) crossover minus_di(high, low, close, 14) AND rsi(close, 14) > 55 AND countstreak(close > sma(close, 20), 8) >= 3
+sma(close, 50) < sma(close, 200) AND macd(close, 12, 26, 9) < 0 AND stoch(high, low, close, 14) < 25 AND mfi(high, low, close, volume, 14) < 40
+ema(close, 100) crossover ema(close, 200) AND bbands(close, 20, 2).middle < close AND adx(high, low, close, 14) > 20
+rsi(close, 14) < 30 AND bbands(close, 20, 2).lower > close AND count(close < n_days_ago(close, 1), 7) >= 4
+stochrsi(close, 14) crossover 60 AND obv(close, volume) > sma(obv(close, volume), 50) AND atr(high, low, close, 14) < 10
+ema(close, 21) > ema(close, 55) AND n_weeks_ago(ema(close, 21), 4) < ema(close, 21) AND stddev(close, 14) < sma(stddev(close, 14), 28)
+bbands(close, 20, 2).upper < close AND rsi(close, 14) > 65 AND count(rsi(close, 14) > 60, 14) >= 5
+ema(close, 9) crossover ema(close, 21) AND macd(close, 12, 26, 9) > 0 AND willr(high, low, close, 14) > -40
+mfi(high, low, close, volume, 14) crossover 50 AND sma(close, 20) > sma(close, 50) AND adx(high, low, close, 14) > 18
+obv(close, volume) > sma(obv(close, volume), 100) AND ema(close, 20) > ema(close, 50) AND rsi(close, 14) > 55
+macd(close, 12, 26, 9) crossover 0 AND count(macd(close, 12, 26, 9) < 0, 15) >= 5 AND atr(high, low, close, 14) > 8
+ema(close, 50) crossover ema(close, 200) AND adx(high, low, close, 14) > 22 AND countstreak(rsi(close, 14) > 50, 7) >= 4
+sma(close, 20) > sma(close, 200) AND bbands(close, 20, 2).upper - bbands(close, 20, 2).lower < n_days_ago(atr(high, low, close, 14), 10)
+rsi(close, 14) crossover 40 AND stoch(high, low, close, 14) > 60 AND plus_di(high, low, close, 14) > minus_di(high, low, close, 14)
+ema(close, 34) > ema(close, 89) AND n_days_ago(ema(close, 34), 3) < ema(close, 34) AND mfi(high, low, close, volume, 14) > 55
+stoch(high, low, close, 14) crossover 80 AND willr(high, low, close, 14) > -20 AND rsi(close, 14) > 60
+stddev(close, 20) < sma(stddev(close, 20), 30) AND macd(close, 12, 26, 9) > 0 AND ema(close, 21) > n_days_ago(ema(close, 21), 5)
+bbands(close, 20, 2).lower > close AND ema(close, 20) > sma(close, 50) AND count(close < bbands(close, 20, 2).lower, 10) >= 2
+ultosc(high, low, close, 7, 14, 28) > 65 AND adx(high, low, close, 14) > 25 AND ema(close, 50) > n_weeks_ago(ema(close, 50), 2)
+sma(close, 10) crossover sma(close, 30) AND mfi(high, low, close, volume, 14) > 60 AND atr(high, low, close, 14) < 9
+ema(close, 20) > ema(close, 50) AND rsi(close, 14) > 55 AND countstreak(close > n_days_ago(close, 1), 6) >= 3
+macd(close, 12, 26, 9) > 0 AND rsi(close, 14) crossover 50 AND bbands(close, 20, 2).middle < close
+plus_di(high, low, close, 14) crossover minus_di(high, low, close, 14) AND mfi(high, low, close, volume, 14) > 55 AND stddev(close, 14) < 12
+ema(close, 55) > ema(close, 200) AND count(ema(close, 21) > ema(close, 55), 20) >= 10 AND adx(high, low, close, 14) > 20
+bbands(close, 20, 2).upper < close AND rsi(close, 14) > 70 AND countstreak(rsi(close, 14) > 60, 7) >= 4
+sma(close, 20) crossover sma(close, 200) AND obv(close, volume) > sma(obv(close, volume), 50) AND mfi(high, low, close, volume, 14) > 65
+rsi(close, 14) < 35 AND stochrsi(close, 14) < 30 AND bbands(close, 20, 2).lower > close AND atr(high, low, close, 14) > 10
+ema(close, 21) crossover ema(close, 200) AND ultosc(high, low, close, 7, 14, 28) > 60 AND willr(high, low, close, 14) > -40
+stddev(close, 20) > n_days_ago(stddev(close, 20), 10) AND macd(close, 12, 26, 9) > 0 AND ema(close, 34) > ema(close, 89)
+sma(close, 50) > sma(close, 200) AND count(close > sma(close, 20), 10) >= 7 AND rsi(close, 14) > 55
+bbands(close, 20, 2).middle crossover sma(close, 50) AND adx(high, low, close, 14) > 23 AND mfi(high, low, close, volume, 14) > 60
+ema(close, 9) > ema(close, 21) AND ema(close, 21) > ema(close, 55) AND countstreak(ema(close, 9) > ema(close, 21), 8) >= 5
+macd(close, 12, 26, 9) crossover 0 AND rsi(close, 14) > 55 AND bbands(close, 20, 2).upper - bbands(close, 20, 2).lower < sma(stddev(close, 20), 20)
+plus_di(high, low, close, 14) > minus_di(high, low, close, 14) AND rsi(close, 14) > 50 AND n_days_ago(adx(high, low, close, 14), 5) < adx(high, low, close, 14)
+ema(close, 34) crossover sma(close, 200) AND mfi(high, low, close, volume, 14) > 55 AND atr(high, low, close, 14) < 11
+bbands(close, 20, 2).lower crossover close AND rsi(close, 14) < 35 AND willr(high, low, close, 14) < -60
+sma(close, 20) > sma(close, 50) AND obv(close, volume) crossover sma(obv(close, volume), 30) AND adx(high, low, close, 14) > 18
+rsi(close, 14) crossover 60 AND stoch(high, low, close, 14) > 70 AND count(stoch(high, low, close, 14) > 80, 10) >= 3
+ema(close, 21) > n_days_ago(ema(close, 21), 3) AND macd(close, 12, 26, 9) > 0 AND bbands(close, 20, 2).middle < close
+stddev(close, 14) < n_days_ago(stddev(close, 14), 7) AND atr(high, low, close, 14) < 9 AND sma(close, 20) > sma(close, 50)
+ultosc(high, low, close, 7, 14, 28) crossover 50 AND rsi(close, 14) > 55 AND ema(close, 34) > ema(close, 89)
+count(ema(close, 50) crossover ema(close, 200), 250) >= 1 AND rsi(close, 14) > 50 AND adx(high, low, close, 14) > 20
+bbands(close, 20, 2).upper < close AND count(close > bbands(close, 20, 2).upper, 10) >= 2 AND mfi(high, low, close, volume, 14) > 65
+ema(close, 13) > sma(close, 34) AND plus_di(high, low, close, 14) > minus_di(high, low, close, 14) AND n_weeks_ago(rsi(close, 14), 2) < rsi(close, 14)
+sma(close, 50) crossover sma(close, 200) AND willr(high, low, close, 14) > -50 AND atr(high, low, close, 14) < sma(atr(high, low, close, 14), 30)
+stochrsi(close, 14) > 80 AND rsi(close, 14) > 60 AND countstreak(rsi(close, 14) > 55, 6) >= 4

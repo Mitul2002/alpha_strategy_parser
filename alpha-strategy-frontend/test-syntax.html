@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Syntax Highlighting Test</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="https://unpkg.com/prismjs@1/prism.js"></script>
+    <link href="https://unpkg.com/prismjs@1/themes/prism-tomorrow.css" rel="stylesheet" />
+    <style>
+        body {
+            background: #1e293b;
+            color: white;
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        .test-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .syntax-highlighted-input {
+            position: relative;
+            margin: 20px 0;
+        }
+        .syntax-overlay {
+            background: #374151;
+            border: 1px solid #4B5563;
+            padding: 12px 16px;
+            font-family: ui-monospace, SFMono-Regular, "SF Mono", Consolas, "Liberation Mono", Menlo, monospace;
+            font-size: 14px;
+            line-height: 1.5;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+            border-radius: 8px;
+        }
+        textarea {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: transparent !important;
+            color: transparent !important;
+            border: none;
+            padding: 12px 16px;
+            font-family: ui-monospace, SFMono-Regular, "SF Mono", Consolas, "Liberation Mono", Menlo, monospace;
+            font-size: 14px;
+            line-height: 1.5;
+            resize: none;
+            outline: none;
+        }
+        .token.function { color: #61dafb; }
+        .token.variable { color: #98c379; }
+        .token.operator { color: #f97583; }
+        .token.number { color: #faa356; }
+        .token.string { color: #c678dd; }
+        .token.keyword { color: #e06c75; }
+        .token.punctuation { color: #abb2bf; }
+    </style>
+</head>
+<body>
+    <div id="app" class="test-container">
+        <h1>Syntax Highlighting Test</h1>
+        <p>Test the syntax highlighting component with trading strategies:</p>
+        
+        <div class="syntax-highlighted-input">
+            <div class="syntax-overlay" v-html="highlightedContent"></div>
+            <textarea 
+                v-model="strategyInput" 
+                @input="updateHighlighting"
+                placeholder="Enter your strategy here... Example: rsi(close, 14) > 70 AND ema(close, 21) > ema(close, 200)"
+                rows="3"
+            ></textarea>
+        </div>
+        
+        <div style="margin-top: 20px;">
+            <h3>Test Examples:</h3>
+            <button @click="loadExample1" style="margin: 5px; padding: 8px 16px; background: #3b82f6; border: none; border-radius: 4px; color: white; cursor: pointer;">Basic RSI</button>
+            <button @click="loadExample2" style="margin: 5px; padding: 8px 16px; background: #3b82f6; border: none; border-radius: 4px; color: white; cursor: pointer;">Multi-timeframe</button>
+            <button @click="loadExample3" style="margin: 5px; padding: 8px 16px; background: #3b82f6; border: none; border-radius: 4px; color: white; cursor: pointer;">Complex Strategy</button>
+        </div>
+        
+        <div style="margin-top: 20px;">
+            <h3>Current Input:</h3>
+            <pre style="background: #374151; padding: 15px; border-radius: 4px; overflow-x: auto;">{{ strategyInput }}</pre>
+        </div>
+    </div>
+
+    <script>
+        const { createApp, ref, computed } = Vue
+
+        createApp({
+            setup() {
+                const strategyInput = ref('')
+                
+                // Define custom trading strategy language
+                Prism.languages.trading = {
+                    'function': {
+                        pattern: /\b(?:rsi|ema|sma|macd|bb_upper|bb_lower|bb_middle|stochrsi|adx|obv|atr|ultosc|sar|trange|cmo|plus_dm|minus_dm|dx|wma|stochrsi|count|countstreak|min|max|abs|ceil|floor|round|square)\b/i,
+                        alias: 'function'
+                    },
+                    'parameter': {
+                        pattern: /\b(?:close|high|low|volume|open)\b/i,
+                        alias: 'variable'
+                    },
+                    'operator': {
+                        pattern: /\b(?:AND|OR|XOR)\b/i,
+                        alias: 'operator'
+                    },
+                    'comparison': {
+                        pattern: /[><=!]=?/,
+                        alias: 'operator'
+                    },
+                    'number': {
+                        pattern: /\b\d+(?:\.\d+)?\b/,
+                        alias: 'number'
+                    },
+                    'timeframe': {
+                        pattern: /\b(?:daily|weekly|monthly|yearly|d|w|m|y)\b/i,
+                        alias: 'string'
+                    },
+                    'keyword': {
+                        pattern: /\b(?:crossover|tf)\b/i,
+                        alias: 'keyword'
+                    },
+                    'parenthesis': {
+                        pattern: /[()]/,
+                        alias: 'punctuation'
+                    },
+                    'comma': {
+                        pattern: /,/,
+                        alias: 'punctuation'
+                    }
+                }
+                
+                const highlightedContent = computed(() => {
+                    if (!strategyInput.value) return ''
+                    
+                    try {
+                        const highlighted = Prism.highlight(strategyInput.value, Prism.languages.trading, 'trading')
+                        return highlighted.replace(/\n/g, '<br>')
+                    } catch (error) {
+                        console.warn('Syntax highlighting error:', error)
+                        return strategyInput.value
+                    }
+                })
+                
+                const updateHighlighting = () => {
+                    // This will trigger the computed property automatically
+                }
+                
+                const loadExample1 = () => {
+                    strategyInput.value = 'rsi(close, 14) > 70 AND ema(close, 21) > ema(close, 200)'
+                }
+                
+                const loadExample2 = () => {
+                    strategyInput.value = 'tf(rsi(close, 14) > 60, "daily") AND tf(macd(close, 12, 26, 9) > 0, "weekly")'
+                }
+                
+                const loadExample3 = () => {
+                    strategyInput.value = 'volume > sma(volume, 20) * 1.5 AND abs(bb_upper(close, 20, 2) - close) > 5'
+                }
+                
+                return {
+                    strategyInput,
+                    highlightedContent,
+                    updateHighlighting,
+                    loadExample1,
+                    loadExample2,
+                    loadExample3
+                }
+            }
+        }).mount('#app')
+    </script>
+</body>
+</html> 

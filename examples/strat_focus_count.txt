@@ -1,0 +1,1 @@
+count(ema(close, 50) crossover ema(close, 200), 250) >= 1 AND rsi(close, 14) > 50 AND adx(high, low, close, 14) > 20 

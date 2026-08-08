@@ -1,0 +1,52 @@
+EHLERS STRATEGIES DEPLOYMENT REPORT
+==================================================
+Total Strategies: 5
+Available Indicators: 9
+Available Transformations: 3
+
+STRATEGY DETAILS:
+------------------------------
+
+Fisher Zero Cross (fisher_zero_cross):
+  Description: Fisher Transform with zero crossing signals
+  Base Indicator: fisher_transform
+  Transformation: none
+  Signal Type: zero_cross
+  Performance: Sharpe=1.434, Win Rate=100.0%
+
+SuperSmoother Stochastic (super_smoother_stochastic):
+  Description: SuperSmoother with stochasticization and threshold
+  Base Indicator: super_smoother
+  Transformation: stochasticization
+  Signal Type: threshold
+  Performance: Sharpe=1.200, Win Rate=88.2%
+
+Decycler Threshold (decycler_threshold):
+  Description: Decycler with simple threshold signals
+  Base Indicator: decycler
+  Transformation: none
+  Signal Type: threshold
+  Performance: Sharpe=1.142, Win Rate=87.2%
+
+BandPass Fisher Zero Cross (bandpass_fisher_zero):
+  Description: Band-Pass Filter with Fisherization and zero crossing
+  Base Indicator: band_pass_filter
+  Transformation: fisherization
+  Signal Type: zero_cross
+  Performance: Sharpe=1.029, Win Rate=80.3%
+
+Instantaneous Trend Crossover (instantaneous_trend_crossover):
+  Description: Instantaneous Trendline with crossover signals
+  Base Indicator: instantaneous_trendline
+  Transformation: none
+  Signal Type: crossover
+  Performance: Sharpe=0.958, Win Rate=79.4%
+
+
+PERFORMANCE RANKING:
+--------------------
+1. Fisher Zero Cross: Sharpe=1.434, Win Rate=100.0%
+2. SuperSmoother Stochastic: Sharpe=1.200, Win Rate=88.2%
+3. Decycler Threshold: Sharpe=1.142, Win Rate=87.2%
+4. BandPass Fisher Zero Cross: Sharpe=1.029, Win Rate=80.3%
+5. Instantaneous Trend Crossover: Sharpe=0.958, Win Rate=79.4%

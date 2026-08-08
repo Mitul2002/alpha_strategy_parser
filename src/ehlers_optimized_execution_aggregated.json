@@ -1,0 +1,666 @@
+{
+  "strategy_summary": {
+    "strategy_01": {
+      "strategy_name": "Fisher Transform Base",
+      "successful_symbols": 50,
+      "total_symbols": 50,
+      "success_rate": 100.0,
+      "avg_signals_per_symbol": 1395.52,
+      "total_signals": 69776,
+      "avg_signal_percentage": 47.957827402408284
+    },
+    "strategy_02": {
+      "strategy_name": "Instantaneous Trendline Base",
+      "successful_symbols": 50,
+      "total_symbols": 50,
+      "success_rate": 100.0,
+      "avg_signals_per_symbol": 2881.06,
+      "total_signals": 144053,
+      "avg_signal_percentage": 99.92641351971753
+    },
+    "strategy_03": {
+      "strategy_name": "Cg Oscillator Base",
+      "successful_symbols": 50,
+      "total_symbols": 50,
+      "success_rate": 100.0,
+      "avg_signals_per_symbol": 1386.96,
+      "total_signals": 69348,
+      "avg_signal_percentage": 47.6595244640055
+    },
+    "strategy_04": {
+      "strategy_name": "Relative Vigor Index Base",
+      "successful_symbols": 50,
+      "total_symbols": 50,
+      "success_rate": 100.0,
+      "avg_signals_per_symbol": 1424.94,
+      "total_signals": 71247,
+      "avg_signal_percentage": 48.5789333298333
+    },
+    "strategy_05": {
+      "strategy_name": "Cyber Cycle Oscillator Base",
+      "successful_symbols": 50,
+      "total_symbols": 50,
+      "success_rate": 100.0,
+      "avg_signals_per_symbol": 1412.06,
+      "total_signals": 70603,
+      "avg_signal_percentage": 48.94139371632882
+    },
+    "strategy_06": {
+      "strategy_name": "Decycler Base",
+      "successful_symbols": 50,
+      "total_symbols": 50,
+      "success_rate": 100.0,
+      "avg_signals_per_symbol": 1547.46,
+      "total_signals": 77373,
+      "avg_signal_percentage": 56.41811588839733
+    },
+    "strategy_07": {
+      "strategy_name": "Band Pass Filter Base",
+      "successful_symbols": 50,
+      "total_symbols": 50,
+      "success_rate": 100.0,
+      "avg_signals_per_symbol": 1478.54,
+      "total_signals": 73927,
+      "avg_signal_percentage": 52.16969580927275
+    },
+    "strategy_08": {
+      "strategy_name": "Super Smoother Base",
+      "successful_symbols": 50,
+      "total_symbols": 50,
+      "success_rate": 100.0,
+      "avg_signals_per_symbol": 2885.28,
+      "total_signals": 144264,
+      "avg_signal_percentage": 100.0
+    },
+    "strategy_09": {
+      "strategy_name": "Roofing Filter Base",
+      "successful_symbols": 50,
+      "total_symbols": 50,
+      "success_rate": 100.0,
+      "avg_signals_per_symbol": 1547.46,
+      "total_signals": 77373,
+      "avg_signal_percentage": 56.41811588839733
+    },
+    "strategy_10": {
+      "strategy_name": "Fisher Transform Stochastic",
+      "successful_symbols": 50,
+      "total_symbols": 50,
+      "success_rate": 100.0,
+      "avg_signals_per_symbol": 1400.76,
+      "total_signals": 70038,
+      "avg_signal_percentage": 48.11554676119511
+    },
+    "strategy_11": {
+      "strategy_name": "Instantaneous Trendline Stochastic",
+      "successful_symbols": 50,
+      "total_symbols": 50,
+      "success_rate": 100.0,
+      "avg_signals_per_symbol": 1317.6,
+      "total_signals": 65880,
+      "avg_signal_percentage": 45.8400867592952
+    },
+    "strategy_12": {
+      "strategy_name": "Cg Oscillator Stochastic",
+      "successful_symbols": 50,
+      "total_symbols": 50,
+      "success_rate": 100.0,
+      "avg_signals_per_symbol": 1387.1,
+      "total_signals": 69355,
+      "avg_signal_percentage": 47.91867450037142
+    },
+    "strategy_13": {
+      "strategy_name": "Relative Vigor Index Stochastic",
+      "successful_symbols": 50,
+      "total_symbols": 50,
+      "success_rate": 100.0,
+      "avg_signals_per_symbol": 1440.52,
+      "total_signals": 72026,
+      "avg_signal_percentage": 49.523581369252206
+    },
+    "strategy_14": {
+      "strategy_name": "Cyber Cycle Oscillator Stochastic",
+      "successful_symbols": 50,
+      "total_symbols": 50,
+      "success_rate": 100.0,
+      "avg_signals_per_symbol": 1363.32,
+      "total_signals": 68166,
+      "avg_signal_percentage": 47.16250503697844
+    },
+    "strategy_15": {
+      "strategy_name": "Decycler Stochastic",
+      "successful_symbols": 50,
+      "total_symbols": 50,
+      "success_rate": 100.0,
+      "avg_signals_per_symbol": 1348.76,
+      "total_signals": 67438,
+      "avg_signal_percentage": 43.93441410833687
+    },
+    "strategy_16": {
+      "strategy_name": "Band Pass Filter Stochastic",
+      "successful_symbols": 50,
+      "total_symbols": 50,
+      "success_rate": 100.0,
+      "avg_signals_per_symbol": 1369.42,
+      "total_signals": 68471,
+      "avg_signal_percentage": 46.04576572318135
+    },
+    "strategy_17": {
+      "strategy_name": "Super Smoother Stochastic",
+      "successful_symbols": 50,
+      "total_symbols": 50,
+      "success_rate": 100.0,
+      "avg_signals_per_symbol": 1451.46,
+      "total_signals": 72573,
+      "avg_signal_percentage": 49.3099252796637
+    },
+    "strategy_18": {
+      "strategy_name": "Roofing Filter Stochastic",
+      "successful_symbols": 50,
+      "total_symbols": 50,
+      "success_rate": 100.0,
+      "avg_signals_per_symbol": 1348.76,
+      "total_signals": 67438,
+      "avg_signal_percentage": 43.93441410833687
+    },
+    "strategy_19": {
+      "strategy_name": "Fisher Transform Fisher",
+      "successful_symbols": 50,
+      "total_symbols": 50,
+      "success_rate": 100.0,
+      "avg_signals_per_symbol": 342.6,
+      "total_signals": 17130,
+      "avg_signal_percentage": 11.646418972733223
+    },
+    "strategy_20": {
+      "strategy_name": "Instantaneous Trendline Fisher",
+      "successful_symbols": 50,
+      "total_symbols": 50,
+      "success_rate": 100.0,
+      "avg_signals_per_symbol": 607.64,
+      "total_signals": 30382,
+      "avg_signal_percentage": 20.993155587966374
+    },
+    "strategy_21": {
+      "strategy_name": "Cg Oscillator Fisher",
+      "successful_symbols": 50,
+      "total_symbols": 50,
+      "success_rate": 100.0,
+      "avg_signals_per_symbol": 311.68,
+      "total_signals": 15584,
+      "avg_signal_percentage": 10.750026501446872
+    },
+    "strategy_22": {
+      "strategy_name": "Relative Vigor Index Fisher",
+      "successful_symbols": 50,
+      "total_symbols": 50,
+      "success_rate": 100.0,
+      "avg_signals_per_symbol": 235.68,
+      "total_signals": 11784,
+      "avg_signal_percentage": 8.065043834454087
+    },
+    "strategy_23": {
+      "strategy_name": "Cyber Cycle Oscillator Fisher",
+      "successful_symbols": 50,
+      "total_symbols": 50,
+      "success_rate": 100.0,
+      "avg_signals_per_symbol": 653.7,
+      "total_signals": 32685,
+      "avg_signal_percentage": 22.306243493322413
+    },
+    "strategy_24": {
+      "strategy_name": "Decycler Fisher",
+      "successful_symbols": 50,
+      "total_symbols": 50,
+      "success_rate": 100.0,
+      "avg_signals_per_symbol": 242.12,
+      "total_signals": 12106,
+      "avg_signal_percentage": 8.072185871467266
+    },
+    "strategy_25": {
+      "strategy_name": "Band Pass Filter Fisher",
+      "successful_symbols": 50,
+      "total_symbols": 50,
+      "success_rate": 100.0,
+      "avg_signals_per_symbol": 265.24,
+      "total_signals": 13262,
+      "avg_signal_percentage": 9.020118764082083
+    },
+    "strategy_26": {
+      "strategy_name": "Super Smoother Fisher",
+      "successful_symbols": 50,
+      "total_symbols": 50,
+      "success_rate": 100.0,
+      "avg_signals_per_symbol": 95.84,
+      "total_signals": 4792,
+      "avg_signal_percentage": 3.312356948159021
+    },
+    "strategy_27": {
+      "strategy_name": "Roofing Filter Fisher",
+      "successful_symbols": 50,
+      "total_symbols": 50,
+      "success_rate": 100.0,
+      "avg_signals_per_symbol": 242.12,
+      "total_signals": 12106,
+      "avg_signal_percentage": 8.072185871467266
+    },
+    "strategy_28": {
+      "strategy_name": "Fisher Transform Combined",
+      "successful_symbols": 50,
+      "total_symbols": 50,
+      "success_rate": 100.0,
+      "avg_signals_per_symbol": 896.46,
+      "total_signals": 44823,
+      "avg_signal_percentage": 30.47149250077137
+    },
+    "strategy_29": {
+      "strategy_name": "Instantaneous Trendline Combined",
+      "successful_symbols": 50,
+      "total_symbols": 50,
+      "success_rate": 100.0,
+      "avg_signals_per_symbol": 1343.8,
+      "total_signals": 67190,
+      "avg_signal_percentage": 45.99150477815422
+    },
+    "strategy_30": {
+      "strategy_name": "Cg Oscillator Combined",
+      "successful_symbols": 50,
+      "total_symbols": 50,
+      "success_rate": 100.0,
+      "avg_signals_per_symbol": 1114.18,
+      "total_signals": 55709,
+      "avg_signal_percentage": 37.9499223845897
+    },
+    "strategy_31": {
+      "strategy_name": "Relative Vigor Index Combined",
+      "successful_symbols": 50,
+      "total_symbols": 50,
+      "success_rate": 100.0,
+      "avg_signals_per_symbol": 1001.06,
+      "total_signals": 50053,
+      "avg_signal_percentage": 34.00703867749749
+    },
+    "strategy_32": {
+      "strategy_name": "Cyber Cycle Oscillator Combined",
+      "successful_symbols": 50,
+      "total_symbols": 50,
+      "success_rate": 100.0,
+      "avg_signals_per_symbol": 1388.48,
+      "total_signals": 69424,
+      "avg_signal_percentage": 47.479673216121945
+    },
+    "strategy_33": {
+      "strategy_name": "Decycler Combined",
+      "successful_symbols": 50,
+      "total_symbols": 50,
+      "success_rate": 100.0,
+      "avg_signals_per_symbol": 998.86,
+      "total_signals": 49943,
+      "avg_signal_percentage": 33.09499604649665
+    },
+    "strategy_34": {
+      "strategy_name": "Band Pass Filter Combined",
+      "successful_symbols": 50,
+      "total_symbols": 50,
+      "success_rate": 100.0,
+      "avg_signals_per_symbol": 1039.68,
+      "total_signals": 51984,
+      "avg_signal_percentage": 35.05992923681772
+    },
+    "strategy_35": {
+      "strategy_name": "Super Smoother Combined",
+      "successful_symbols": 50,
+      "total_symbols": 50,
+      "success_rate": 100.0,
+      "avg_signals_per_symbol": 540.82,
+      "total_signals": 27041,
+      "avg_signal_percentage": 18.940369259428948
+    },
+    "strategy_36": {
+      "strategy_name": "Roofing Filter Combined",
+      "successful_symbols": 50,
+      "total_symbols": 50,
+      "success_rate": 100.0,
+      "avg_signals_per_symbol": 998.86,
+      "total_signals": 49943,
+      "avg_signal_percentage": 33.09499604649665
+    },
+    "strategy_37": {
+      "strategy_name": "Instantaneous Trendline Extreme",
+      "successful_symbols": 50,
+      "total_symbols": 50,
+      "success_rate": 100.0,
+      "avg_signals_per_symbol": 838.82,
+      "total_signals": 41941,
+      "avg_signal_percentage": 28.341570262322552
+    },
+    "strategy_38": {
+      "strategy_name": "Decycler Extreme",
+      "successful_symbols": 50,
+      "total_symbols": 50,
+      "success_rate": 100.0,
+      "avg_signals_per_symbol": 193.74,
+      "total_signals": 9687,
+      "avg_signal_percentage": 8.741310063907541
+    },
+    "strategy_39": {
+      "strategy_name": "Band Pass Filter Extreme",
+      "successful_symbols": 50,
+      "total_symbols": 50,
+      "success_rate": 100.0,
+      "avg_signals_per_symbol": 257.6,
+      "total_signals": 12880,
+      "avg_signal_percentage": 9.038708433384503
+    },
+    "strategy_40": {
+      "strategy_name": "Super Smoother Extreme",
+      "successful_symbols": 50,
+      "total_symbols": 50,
+      "success_rate": 100.0,
+      "avg_signals_per_symbol": 61.68,
+      "total_signals": 3084,
+      "avg_signal_percentage": 2.085988954949317
+    },
+    "strategy_41": {
+      "strategy_name": "Roofing Filter Extreme",
+      "successful_symbols": 50,
+      "total_symbols": 50,
+      "success_rate": 100.0,
+      "avg_signals_per_symbol": 193.74,
+      "total_signals": 9687,
+      "avg_signal_percentage": 8.741310063907541
+    },
+    "strategy_42": {
+      "strategy_name": "Cg Oscillator Extreme",
+      "successful_symbols": 50,
+      "total_symbols": 50,
+      "success_rate": 100.0,
+      "avg_signals_per_symbol": 652.66,
+      "total_signals": 32633,
+      "avg_signal_percentage": 20.412633269895267
+    },
+    "strategy_43": {
+      "strategy_name": "Cyber Cycle Oscillator Extreme",
+      "successful_symbols": 50,
+      "total_symbols": 50,
+      "success_rate": 100.0,
+      "avg_signals_per_symbol": 862.64,
+      "total_signals": 43132,
+      "avg_signal_percentage": 29.727498307265083
+    },
+    "strategy_44": {
+      "strategy_name": "Relative Vigor Index Extreme",
+      "successful_symbols": 50,
+      "total_symbols": 50,
+      "success_rate": 100.0,
+      "avg_signals_per_symbol": 32.26,
+      "total_signals": 1613,
+      "avg_signal_percentage": 1.2050906920064406
+    },
+    "strategy_45": {
+      "strategy_name": "Fisher Transform Extreme",
+      "successful_symbols": 50,
+      "total_symbols": 50,
+      "success_rate": 100.0,
+      "avg_signals_per_symbol": 21.4,
+      "total_signals": 1070,
+      "avg_signal_percentage": 0.6811514900214942
+    },
+    "strategy_46": {
+      "strategy_name": "Fisher SuperSmoother Hybrid",
+      "successful_symbols": 50,
+      "total_symbols": 50,
+      "success_rate": 100.0,
+      "avg_signals_per_symbol": 1397.7,
+      "total_signals": 69885,
+      "avg_signal_percentage": 48.147232951759904
+    },
+    "strategy_47": {
+      "strategy_name": "CG Oscillator Enhanced",
+      "successful_symbols": 50,
+      "total_symbols": 50,
+      "success_rate": 100.0,
+      "avg_signals_per_symbol": 1124.7,
+      "total_signals": 56235,
+      "avg_signal_percentage": 37.733169836795184
+    },
+    "strategy_48": {
+      "strategy_name": "Instantaneous Trend Advanced",
+      "successful_symbols": 50,
+      "total_symbols": 50,
+      "success_rate": 100.0,
+      "avg_signals_per_symbol": 607.44,
+      "total_signals": 30372,
+      "avg_signal_percentage": 20.98607088463516
+    },
+    "strategy_49": {
+      "strategy_name": "RVI Stochastic Enhanced",
+      "successful_symbols": 50,
+      "total_symbols": 50,
+      "success_rate": 100.0,
+      "avg_signals_per_symbol": 27.46,
+      "total_signals": 1373,
+      "avg_signal_percentage": 1.1011227686260614
+    },
+    "strategy_50": {
+      "strategy_name": "Cyber Cycle Ultimate",
+      "successful_symbols": 50,
+      "total_symbols": 50,
+      "success_rate": 100.0,
+      "avg_signals_per_symbol": 1405.84,
+      "total_signals": 70292,
+      "avg_signal_percentage": 47.888722022861955
+    }
+  },
+  "symbol_summary": {
+    "20MICRONS": {
+      "total_signals": 69372,
+      "strategies_count": 50
+    },
+    "21STCENMGM": {
+      "total_signals": 26598,
+      "strategies_count": 50
+    },
+    "360ONE": {
+      "total_signals": 25110,
+      "strategies_count": 50
+    },
+    "3IINFOLTD": {
+      "total_signals": 78042,
+      "strategies_count": 50
+    },
+    "3MINDIA": {
+      "total_signals": 127451,
+      "strategies_count": 50
+    },
+    "3PLAND": {
+      "total_signals": 58103,
+      "strategies_count": 50
+    },
+    "5PAISA": {
+      "total_signals": 31140,
+      "strategies_count": 50
+    },
+    "63MOONS": {
+      "total_signals": 73592,
+      "strategies_count": 50
+    },
+    "A2ZINFRA": {
+      "total_signals": 55595,
+      "strategies_count": 50
+    },
+    "AAATECH": {
+      "total_signals": 10540,
+      "strategies_count": 50
+    },
+    "AADHARHFC": {
+      "total_signals": 4561,
+      "strategies_count": 50
+    },
+    "AAKASH": {
+      "total_signals": 18663,
+      "strategies_count": 50
+    },
+    "AAREYDRUGS": {
+      "total_signals": 15723,
+      "strategies_count": 50
+    },
+    "AARON": {
+      "total_signals": 20166,
+      "strategies_count": 50
+    },
+    "AARTECH": {
+      "total_signals": 7932,
+      "strategies_count": 50
+    },
+    "AARTIDRUGS": {
+      "total_signals": 90460,
+      "strategies_count": 50
+    },
+    "AARTIIND": {
+      "total_signals": 108790,
+      "strategies_count": 50
+    },
+    "AARTIPHARM": {
+      "total_signals": 10144,
+      "strategies_count": 50
+    },
+    "AARTISURF": {
+      "total_signals": 19468,
+      "strategies_count": 50
+    },
+    "AARVEEDEN": {
+      "total_signals": 73359,
+      "strategies_count": 50
+    },
+    "AARVI": {
+      "total_signals": 20811,
+      "strategies_count": 50
+    },
+    "AAVAS": {
+      "total_signals": 28990,
+      "strategies_count": 50
+    },
+    "ABAN": {
+      "total_signals": 73195,
+      "strategies_count": 50
+    },
+    "ABB": {
+      "total_signals": 112403,
+      "strategies_count": 50
+    },
+    "ABBOTINDIA": {
+      "total_signals": 67605,
+      "strategies_count": 50
+    },
+    "ABCAPITAL": {
+      "total_signals": 31856,
+      "strategies_count": 50
+    },
+    "ABDL": {
+      "total_signals": 4086,
+      "strategies_count": 50
+    },
+    "ABFRL": {
+      "total_signals": 39981,
+      "strategies_count": 50
+    },
+    "ABINFRA": {
+      "total_signals": 12481,
+      "strategies_count": 50
+    },
+    "ABMINTLLTD": {
+      "total_signals": 14686,
+      "strategies_count": 50
+    },
+    "ABREL": {
+      "total_signals": 113789,
+      "strategies_count": 50
+    },
+    "ABSLAMC": {
+      "total_signals": 15735,
+      "strategies_count": 50
+    },
+    "ACC": {
+      "total_signals": 114199,
+      "strategies_count": 50
+    },
+    "ACCELYA": {
+      "total_signals": 105584,
+      "strategies_count": 50
+    },
+    "ACCURACY": {
+      "total_signals": 18199,
+      "strategies_count": 50
+    },
+    "ACE": {
+      "total_signals": 78853,
+      "strategies_count": 50
+    },
+    "ACEINTEG": {
+      "total_signals": 10658,
+      "strategies_count": 50
+    },
+    "ACI": {
+      "total_signals": 10562,
+      "strategies_count": 50
+    },
+    "ACL": {
+      "total_signals": 52043,
+      "strategies_count": 50
+    },
+    "ACLGATI": {
+      "total_signals": 76657,
+      "strategies_count": 50
+    },
+    "ACMESOLAR": {
+      "total_signals": 2415,
+      "strategies_count": 50
+    },
+    "ADANIENSOL": {
+      "total_signals": 41594,
+      "strategies_count": 50
+    },
+    "ADANIENT": {
+      "total_signals": 80180,
+      "strategies_count": 50
+    },
+    "ADANIGREEN": {
+      "total_signals": 29161,
+      "strategies_count": 50
+    },
+    "ADANIPORTS": {
+      "total_signals": 75242,
+      "strategies_count": 50
+    },
+    "ADANIPOWER": {
+      "total_signals": 65226,
+      "strategies_count": 50
+    },
+    "ADFFOODS": {
+      "total_signals": 62517,
+      "strategies_count": 50
+    },
+    "ADL": {
+      "total_signals": 21122,
+      "strategies_count": 50
+    },
+    "ADOR": {
+      "total_signals": 87369,
+      "strategies_count": 50
+    },
+    "ADROITINFO": {
+      "total_signals": 27166,
+      "strategies_count": 50
+    }
+  },
+  "overall_metrics": {
+    "total_strategies": 50,
+    "total_symbols": 50,
+    "total_signals_generated": 2419174,
+    "avg_signals_per_strategy": 48383.48,
+    "avg_signals_per_symbol": 48383.48,
+    "avg_signal_percentage": 33.260283433175665,
+    "most_active_strategy": "strategy_08",
+    "most_active_symbol": "3MINDIA"
+  }
+}

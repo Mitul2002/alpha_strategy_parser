@@ -1,0 +1,1 @@
+sma(close, 20) > sma(close, 50) AND obv(close, volume) crossover sma(obv(close, volume), 30) AND adx(high, low, close, 14) > 18 

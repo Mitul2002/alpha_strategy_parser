@@ -1,0 +1,101 @@
+{
+  "strategies": {
+    "fisher_zero_cross": {
+      "name": "Fisher Zero Cross",
+      "description": "Fisher Transform with zero crossing signals",
+      "base_indicator": "fisher_transform",
+      "transformation": "none",
+      "signal_type": "zero_cross",
+      "signal_params": {},
+      "indicator_params": {
+        "period": 10
+      },
+      "performance": {
+        "sharpe_ratio": 1.434,
+        "win_rate": 100.0
+      }
+    },
+    "super_smoother_stochastic": {
+      "name": "SuperSmoother Stochastic",
+      "description": "SuperSmoother with stochasticization and threshold",
+      "base_indicator": "super_smoother",
+      "transformation": "stochasticization",
+      "signal_type": "threshold",
+      "signal_params": {
+        "threshold": 50.0
+      },
+      "indicator_params": {
+        "period": 10
+      },
+      "performance": {
+        "sharpe_ratio": 1.2,
+        "win_rate": 88.2
+      }
+    },
+    "decycler_threshold": {
+      "name": "Decycler Threshold",
+      "description": "Decycler with simple threshold signals",
+      "base_indicator": "decycler",
+      "transformation": "none",
+      "signal_type": "threshold",
+      "signal_params": {
+        "threshold": 0.0
+      },
+      "indicator_params": {
+        "cutoff_period": 40
+      },
+      "performance": {
+        "sharpe_ratio": 1.142,
+        "win_rate": 87.2
+      }
+    },
+    "bandpass_fisher_zero": {
+      "name": "BandPass Fisher Zero Cross",
+      "description": "Band-Pass Filter with Fisherization and zero crossing",
+      "base_indicator": "band_pass_filter",
+      "transformation": "fisherization",
+      "signal_type": "zero_cross",
+      "signal_params": {},
+      "indicator_params": {
+        "low_period": 10,
+        "high_period": 20
+      },
+      "performance": {
+        "sharpe_ratio": 1.029,
+        "win_rate": 80.3
+      }
+    },
+    "instantaneous_trend_crossover": {
+      "name": "Instantaneous Trend Crossover",
+      "description": "Instantaneous Trendline with crossover signals",
+      "base_indicator": "instantaneous_trendline",
+      "transformation": "none",
+      "signal_type": "crossover",
+      "signal_params": {},
+      "indicator_params": {
+        "alpha": 0.07
+      },
+      "performance": {
+        "sharpe_ratio": 0.958,
+        "win_rate": 79.4
+      }
+    }
+  },
+  "indicators": [
+    "fisher_transform",
+    "instantaneous_trendline",
+    "cg_oscillator",
+    "relative_vigor_index",
+    "cyber_cycle_oscillator",
+    "decycler",
+    "band_pass_filter",
+    "super_smoother",
+    "roofing_filter"
+  ],
+  "transformations": [
+    "stochasticization",
+    "fisherization",
+    "combined_transformation"
+  ],
+  "export_timestamp": 1757655677.3083866
+}

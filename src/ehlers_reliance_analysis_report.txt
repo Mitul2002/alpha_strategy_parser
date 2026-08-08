@@ -1,0 +1,56 @@
+RELIANCE COMPREHENSIVE ANALYSIS REPORT
+============================================================
+Date: 2025-09-12 12:10:57
+
+RELIANCE DATA INFORMATION:
+  Total Trading Days: 7,589
+  Price Range: ₹6.56 - ₹1600.90
+  Current Price: ₹1495.30
+
+OVERALL ANALYSIS SUMMARY:
+  Total Strategies Analyzed: 50
+  Successful Strategies: 50
+  Total Trades Generated: 132,593
+  Average Trades per Strategy: 2651.9
+
+TOP 10 STRATEGIES BY TRADE COUNT:
+   1. strategy_02: 7,589 trades (Instantaneous Trendline Base)
+   2. strategy_08: 7,589 trades (Super Smoother Base)
+   3. strategy_06: 4,422 trades (Decycler Base)
+   4. strategy_09: 4,422 trades (Roofing Filter Base)
+   5. strategy_07: 4,211 trades (Band Pass Filter Base)
+   6. strategy_17: 4,125 trades (Super Smoother Stochastic)
+   7. strategy_04: 4,076 trades (Relative Vigor Index Base)
+   8. strategy_01: 4,044 trades (Fisher Transform Base)
+   9. strategy_03: 4,038 trades (Cg Oscillator Base)
+  10. strategy_10: 3,829 trades (Fisher Transform Stochastic)
+
+STRATEGY CATEGORIES SUMMARY:
+  Base Indicators (1-9): 44,516 total trades, 4946.2 avg per strategy
+  Stochasticized (10-18): 33,844 total trades, 3760.4 avg per strategy
+  Fisherized (19-27): 29,142 total trades, 3238.0 avg per strategy
+  Combined Transform (28-36): 18,802 total trades, 2089.1 avg per strategy
+  Extreme Signals (37-45): 5,897 total trades, 655.2 avg per strategy
+  Special Combinations (46-50): 392 total trades, 78.4 avg per strategy
+
+SAMPLE TRADES (First 20):
+   1. Day    0: Price ₹   16.86, Indicator   16.856 (Instantaneous Trendline Base)
+   2. Day    0: Price ₹   16.86, Indicator   16.856 (Decycler Base)
+   3. Day    0: Price ₹   16.86, Indicator   16.856 (Band Pass Filter Base)
+   4. Day    0: Price ₹   16.86, Indicator   16.856 (Super Smoother Base)
+   5. Day    0: Price ₹   16.86, Indicator   16.856 (Roofing Filter Base)
+   6. Day    1: Price ₹   16.83, Indicator   16.835 (Instantaneous Trendline Base)
+   7. Day    1: Price ₹   16.83, Indicator   16.835 (Decycler Base)
+   8. Day    1: Price ₹   16.83, Indicator   16.835 (Band Pass Filter Base)
+   9. Day    1: Price ₹   16.83, Indicator   16.853 (Super Smoother Base)
+  10. Day    1: Price ₹   16.83, Indicator   16.835 (Roofing Filter Base)
+  11. Day    2: Price ₹   16.86, Indicator   16.838 (Instantaneous Trendline Base)
+  12. Day    2: Price ₹   16.86, Indicator   16.015 (Decycler Base)
+  13. Day    2: Price ₹   16.86, Indicator   15.233 (Band Pass Filter Base)
+  14. Day    2: Price ₹   16.86, Indicator   16.855 (Super Smoother Base)
+  15. Day    2: Price ₹   16.86, Indicator   16.015 (Roofing Filter Base)
+  16. Day    3: Price ₹   16.47, Indicator   16.809 (Instantaneous Trendline Base)
+  17. Day    3: Price ₹   16.47, Indicator   15.215 (Decycler Base)
+  18. Day    3: Price ₹   16.47, Indicator   13.746 (Band Pass Filter Base)
+  19. Day    3: Price ₹   16.47, Indicator   16.765 (Super Smoother Base)
+  20. Day    3: Price ₹   16.47, Indicator   15.215 (Roofing Filter Base)

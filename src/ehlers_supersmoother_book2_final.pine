@@ -1,0 +1,59 @@
+//@version=6
+indicator("*bk2ch3 Super smoother", overlay=false)
+
+// Input parameters
+cutoff_length = input.int(10, "Cutoff Length", minval=3, maxval=50, tooltip="Minimum cycle length in bars")
+roof_cutoff_length = input.int(48, "Roof Cutoff Length", minval=10, maxval=100, tooltip="Maximum cycle length in bars")
+source_price = input.source(close, "Source", tooltip="Price source for the filter")
+
+// Enhanced SuperSmoother coefficients (Book 2 version)
+get_supersmoother_coeffs(length) =>
+    // Enhanced coefficients for Book 2 SuperSmoother
+    a1 = math.exp(-1.414 * math.pi / length)
+    b1 = 2 * a1 * math.cos(1.414 * math.pi / length)
+    c2 = b1
+    c3 = -a1 * a1
+    c1 = 1 - c2 - c3
+    [c1, c2, c3]
+
+// High-pass filter for spectral dilation removal (Book 2 feature)
+high_pass_filter(price, length) =>
+    alpha = (1 - math.sin(2 * math.pi / length)) / math.cos(2 * math.pi / length)
+    var float hp = na
+    if na(hp[1])
+        hp := 0
+    else
+        hp := 0.5 * (1 + alpha) * (price - price[1]) + alpha * hp[1]
+    hp
+
+// Enhanced SuperSmoother filter (Book 2)
+supersmoother_filter(price, length) =>
+    [c1, c2, c3] = get_supersmoother_coeffs(length)
+    var float ss = na
+    if na(ss[1])
+        ss := price
+    else if na(ss[2])
+        ss := price
+    else
+        ss := c1 * (price + price[1]) / 2 + c2 * ss[1] + c3 * ss[2]
+    ss
+
+// Roofing Filter - combines SuperSmoother with spectral dilation removal
+roofing_filter(price, cutoff_len, roof_cutoff_len) =>
+    // First apply high-pass filter to remove long-period components
+    hp = high_pass_filter(price, roof_cutoff_len)
+    
+    // Then apply SuperSmoother to the high-passed data
+    ss = supersmoother_filter(hp, cutoff_len)
+    ss
+
+// Calculate the Roofing Filter
+roofing_value = roofing_filter(source_price, cutoff_length, roof_cutoff_length)
+
+// Plot the result (oscillates around zero)
+plot(roofing_value, title="Roofing Filter", color=color.blue, linewidth=2)
+hline(0, "Zero Line", color=color.gray, linestyle=hline.style_dotted)
+
+// Optional: Add alerts for zero line crossovers
+alertcondition(ta.crossover(roofing_value, 0), title="Cross Above Zero", message="Roofing Filter crossed above zero")
+alertcondition(ta.crossunder(roofing_value, 0), title="Cross Below Zero", message="Roofing Filter crossed below zero")
