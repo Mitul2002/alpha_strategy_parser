@@ -1,9 +1,0 @@
-{
-  "strategy_summary": {
-    "strategy_01": {
-      "strategy_name": "Fisher Transform Base",
-      "successful_symbols": 99,
-      "total_symbols": 99,
-      "success_rate": 100.0,
-      "avg_signals_per_symbol": 2170.7272727272725,
-      "total_signals": 
