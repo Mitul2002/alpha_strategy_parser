@@ -1,0 +1,21 @@
+services:
+  backend:
+    build:
+      context: .
+      dockerfile: webapi/Dockerfile
+    ports:
+      - "8000:8000"
+    healthcheck:
+      test: ["CMD", "micromamba", "run", "-n", "base", "python", "-c",
+             "import urllib.request; urllib.request.urlopen('http://localhost:8000/health')"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+
+  frontend:
+    build:
+      context: ./alpha-strategy-frontend
+    ports:
+      - "5173:80"
+    depends_on:
+      - backend
